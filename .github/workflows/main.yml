@@ -30,10 +30,10 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: |
           # Branch-specific date tag
-          IMAGE_DATE=ghcr.io/$REPO/$BRANCH:$(date +%Y-%m-%d)
+          IMAGE_DATE=ghcr.io/$REPO:$(date +%Y-%m-%d)
 
           # Branch-specific latest tag
-          IMAGE_LATEST=ghcr.io/$REPO/$BRANCH:latest
+          IMAGE_LATEST=ghcr.io/$REPO:latest
 
           echo "Building $IMAGE_DATE and tagging $IMAGE_LATEST"
 
